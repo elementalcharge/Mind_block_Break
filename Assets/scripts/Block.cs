@@ -7,11 +7,15 @@ public class Block : MonoBehaviour
     [SerializeField] AudioClip[] breakSounds;
     //cached reference
     Level level;
+    GameSession status;
 
     private void Start()
     {
         level= FindObjectOfType<Level>();
         level.CountBreakableBlocks();
+
+        status = FindObjectOfType<GameSession>();
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,6 +26,7 @@ public class Block : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(breakSounds[UnityEngine.Random.Range(0, breakSounds.Length)], Camera.main.transform.position);
         level.BlockDestroyed();
+        status.addToScore();
         Destroy(gameObject);
     }
 }

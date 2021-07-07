@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour
 
     private void checkBreath()
     {
-        if (!hasStarted)
+        if (hasStarted)
             {
             if (Input.GetKeyUp("space"))
                 {
@@ -62,7 +62,7 @@ public class Ball : MonoBehaviour
     }
     private void LaunchOnMouseClick()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && hasStarted != true)
         {
             hasStarted = true;
             GetComponent<Rigidbody2D>().velocity = new Vector2(rightImpulse, upperImpulse);

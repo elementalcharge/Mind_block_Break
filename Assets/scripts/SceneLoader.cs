@@ -12,8 +12,13 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadStartScene()
     {
-        
+        StartNewGame();
         SceneManager.LoadScene(0);
+    }
+
+    public void StartNewGame()
+    {
+        FindObjectOfType<GameSession>().resetGame();
     }
     public void QuitGame()
     {
