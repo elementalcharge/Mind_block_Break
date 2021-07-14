@@ -9,10 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/wizard UI test/mind block breaker Start.unity
     guid: 9bc470699025fb748959eadf2f7d834a
   - enabled: 1
+    path: Assets/Scenes/wizard UI test/mind block level 1 Relax 1.unity
+    guid: d933658b6affa9d4f9c5f30bf2933dc0
+  - enabled: 1
     path: Assets/Scenes/wizard UI test/mind block level 2 Enjoy.unity
     guid: ed2a98a1b903dd8448c968285882caf2
   - enabled: 1
-    path: Assets/Scenes/wizard UI test/mind block level 1 Relax.unity
+    path: Assets/Scenes/wizard UI test/mind block level 3 spiral.unity
     guid: fece000d6c49761468644625465cd424
   - enabled: 1
     path: Assets/Scenes/wizard UI test/mind block GameOver.unity
