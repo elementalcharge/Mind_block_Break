@@ -377,8 +377,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: son todos los pensamientos que decides conservar aquello que deseas preservar
-    aquellos que componen tu ser
+  m_text: este juego es un experimento para recordar liberar mi mente de distracciones
+    al representar mi objetivo en un juego
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -511,7 +511,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: romper los bloques libera tu mente del pensamiento asociado
+  m_text: Espero que lo disfrutes y con suerte tambien te sirva a visualizar la idea
+    de borrar las distracciones de tu mente y perseguir tus metas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -538,7 +539,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.45
+  m_fontSize: 45.3
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -644,8 +645,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: son tus pensamientos pasajeros existentes pero facilmente borrables, son
-    poco importantes y no los necesitas
+  m_text: 'la barra spaciadora se utilizala para cambiar tu concentracion entre los
+    bloques y tu paddle.
+
+    Utiliza el click izquierdo para empezar'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -778,8 +781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: son tus pensamientos inutiles pero persistentes que cada tanto te aparecen
-    pero no te proporcionan nada pero distraen lo suficiente para tenerlos en cuenta
+  m_text: "mientras mas tiempo te enfoques en uno mas peque\xF1o se volvera el otro\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -806,7 +808,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.7
+  m_fontSize: 55.35
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -955,7 +957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'concentrate y antes de empezar acepta estos hechos:'
+  m_text: 'concentrate y antes de empezar lee las instrucciones:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -1088,8 +1090,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: son tus obseciones, tus miedos y pensamientos que te detienen de intentar
-    analizar y de pensar claramente tu situacion
+  m_text: los bloques representan pensamientos  pasajeros olvidables mientras mas
+    te enfocas mas perderas el foco de lo que intentas hacer (representada en el
+    paddle)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -1116,7 +1119,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.2
+  m_fontSize: 38
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1

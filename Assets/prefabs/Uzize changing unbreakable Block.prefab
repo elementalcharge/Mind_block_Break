@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 253707223028685501}
   - component: {fileID: 253707223028685499}
   - component: {fileID: 527534717}
+  - component: {fileID: 970784827692541696}
   m_Layer: 0
-  m_Name: Unbreakable Block 1
+  m_Name: Uzize changing unbreakable Block
   m_TagString: Unbreakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 253707223028685502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,3 +125,21 @@ MonoBehaviour:
   breakSounds:
   - {fileID: 8300000, guid: b9ebe31cbe07b044cb5de677162a6d4f, type: 3}
   blockSparklesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  hitSprites: []
+  timesHit: 0
+--- !u!114 &970784827692541696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253707223028685502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717f9ca5da4b96540bde7d4133ac8f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sizeScaler: 1
+  brathFlow: 1
+  breathLenght: 3
+  maxScaling: 1

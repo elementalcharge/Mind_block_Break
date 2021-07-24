@@ -902,6 +902,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 900939690463999283, guid: 6991c05477489784f92426ded13f4741,
+        type: 3}
+      propertyPath: isAutoPlayEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900939690463999283, guid: 6991c05477489784f92426ded13f4741,
+        type: 3}
+      propertyPath: _timedInvertionForAutoplay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6991c05477489784f92426ded13f4741, type: 3}
 --- !u!1001 &1237122634
@@ -980,8 +990,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 179102549, guid: 33018a3d86d96c643bff607062a26339, type: 3}
+      propertyPath: minX
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 179102549, guid: 33018a3d86d96c643bff607062a26339, type: 3}
+      propertyPath: maxX
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1542442806, guid: 33018a3d86d96c643bff607062a26339, type: 3}
       propertyPath: maxScaling
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542442806, guid: 33018a3d86d96c643bff607062a26339, type: 3}
+      propertyPath: timedInvertionForAutoplay
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6167309384818760945, guid: 33018a3d86d96c643bff607062a26339,

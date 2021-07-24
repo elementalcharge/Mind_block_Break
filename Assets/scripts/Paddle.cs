@@ -11,28 +11,38 @@ public class Paddle : MonoBehaviour
     
     // Update is called once per frame
     //state
-    private bool hasStarted;
+    private GameSession _gameSession;
+    private Ball _ball;
     
     private void Start()
     {
-        hasStarted = false;
-        
+        _gameSession = FindObjectOfType<GameSession>();
+        _ball = FindObjectOfType<Ball>();
     }
 
     void Update()
     {
         //Debug.Log(Input.mousePosition.x/Screen.width* screenWidthInUnityUnits);
-        float mousePositionInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnityUnits;
-        Vector2 paddlePos = new Vector2(mousePositionInUnits, transform.position.y);
-        paddlePos.x = Mathf.Clamp(mousePositionInUnits, minX, maxX);
+        
+        Vector2 paddlePos = new Vector2(transform.position.x , transform.position.y);
+        paddlePos.x = Mathf.Clamp(GetXPos(), minX, maxX);
         transform.position = paddlePos;
         
     }
 
-    public void startGame()
+    private float GetXPos()
     {
-        Debug.Log("message start game received");
-        hasStarted = true;
+        if (_gameSession.IsAutoPlayEnabled())
+        {
+            return _ball.transform.position.x;
+
+        }
+        else
+        {
+            
+            return Input.mousePosition.x / Screen.width * screenWidthInUnityUnits;
+        }
     }
+    
     
 }

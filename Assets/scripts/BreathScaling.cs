@@ -12,28 +12,33 @@ public class BreathScaling : MonoBehaviour
     
     [SerializeField] private float maxScaling = 3f;
 
+    
+    //auto play configuration
+    private float timedInvertionForAutoplay = 1.5f;
+
+    private float timeRemaining;
     // Start is called before the first frame update
     //state
     private bool _hasStarted;
     //cached 
     private Vector3 _scaleChange;
     private Vector3 maxSize;
+    private GameSession _gameSession;
 
     void Start()
     {
+        _gameSession = FindObjectOfType<GameSession>();
         _scaleChange = new Vector3(sizeScaler, sizeScaler, sizeScaler);
         maxSize = new Vector3(maxScaling, maxScaling, maxScaling);
+        
+        timeRemaining = timedInvertionForAutoplay;
     }
     
     private void CheckBreath()
     {
         if (!_hasStarted) return;
-        if (Input.GetKeyUp("space"))
-        {
-            brathFlow *= -1f;
-            Debug.Log("breath changed order");
-        }
-        Debug.Log("breath condition "+(maxSize.magnitude +" local magnitude:"+ transform.localScale.magnitude) );
+        invertFlow();
+        //Debug.Log("breath condition "+(maxSize.magnitude +" local magnitude:"+ transform.localScale.magnitude) );
         if ( (maxSize.magnitude >= transform.localScale.magnitude && brathFlow >0)  ||
              ( (transform.localScale.x > 0 && transform.localScale.y > 0 && transform.localScale.z > 0 ) && brathFlow <0 ) )
         {
@@ -53,5 +58,31 @@ public class BreathScaling : MonoBehaviour
         }
 
         CheckBreath();
+    }
+    
+    private void invertFlow()
+    {
+        if (_gameSession.IsAutoPlayEnabled())
+        {
+            timedInvertion();
+        }
+        else if (Input.GetKeyUp("space"))
+        {
+            brathFlow *= -1f;
+            //Debug.Log("breath changed order");
+        }
+    }
+    
+    private void timedInvertion()
+    {
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+        else
+        {
+            brathFlow *= -1f;
+            timeRemaining = timedInvertionForAutoplay;
+        }
     }
 }
