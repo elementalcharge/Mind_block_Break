@@ -12,10 +12,11 @@ public class BreathScaling : MonoBehaviour
     
     [SerializeField] private float maxScaling = 3f;
 
-    
+    [SerializeField] private float cooldownTimeBetweenInversion = 1.3f;
+
     //auto play configuration
     private float timedInvertionForAutoplay = 1.5f;
-
+    private float cooldownBetweenInversion = 1.5f;
     private float timeRemaining;
     // Start is called before the first frame update
     //state
@@ -62,13 +63,16 @@ public class BreathScaling : MonoBehaviour
     
     private void invertFlow()
     {
+        cooldownBetweenInversion -= Time.deltaTime;
+
         if (_gameSession.IsAutoPlayEnabled())
         {
             timedInvertion();
         }
-        else if (Input.GetKeyUp("space"))
+        else if (Input.GetKeyUp("space") && cooldownBetweenInversion<=0)
         {
             brathFlow *= -1f;
+            cooldownBetweenInversion = cooldownTimeBetweenInversion;
             //Debug.Log("breath changed order");
         }
     }
